@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">GoMusic</string>
+    <string name="play">play</string>
+    <string name="pause">pause</string>
+    <string name="stop">stop</string>
+    <string name="previous">previous</string>
+    <string name="next">next</string>
+    <string name="songs_list">歌曲列表:</string>
+    <string name="music_name">crossing feild</string>
+    <string name="music_artist">织部里沙</string>
+    <string name="music_time">4:30</string>
+    <string name="time_start">00:00</string>
+    <string name="time_end">04:30</string>
+    <string name="exit_menu">退出</string>
+
+    <string name="repeat_current">单曲循环</string>
+    <string name="repeat_all">全部循环</string>
+    <string name="repeat_none">顺序播放</string>
+    <string name="shuffle">随机播放</string>
+    <string name="shuffle_none">取消随机播放</string>
+    <string name="no_next_song">没有下一首了！</string>
+    <string name="no_previous_song">没有上一首了！</string>
+
+</resources>

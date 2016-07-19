@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/playControl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnPrevious"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:background="@mipmap/player_lyr_icon_delayed" />
+
+        <Button
+            android:id="@+id/btnRepeatMusic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:background="@mipmap/repeat_none" />
+
+        <Button
+            android:id="@+id/btnPlay"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:background="@mipmap/action_play_normal" />
+
+        <Button
+            android:id="@+id/btnShuffleMusic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:background="@mipmap/shuffle_none" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:background="@mipmap/player_lyr_icon_advance" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/showProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/playControl">
+
+        <SeekBar
+            android:id="@+id/sbMusicProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvTimeStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sbMusicProgress"
+            android:layout_alignLeft="@+id/sbMusicProgress"
+            android:text="@string/time_start"/>
+
+        <TextView
+            android:id="@+id/tvTimeEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tvTimeStart"
+            android:layout_alignRight="@+id/sbMusicProgress"
+            android:text="@string/time_end"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lvMusicList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/showProgress"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="5dp"
+        android:divider="#ccc"
+        android:dividerHeight="2dp"/>
+
+    <RelativeLayout
+        android:id="@+id/aboutMusic"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:layout_below="@+id/lvMusicList">
+
+        <ImageView
+            android:id="@+id/ivMusicAlbum"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/music_icon" />
+
+        <TextView
+            android:id="@+id/tvMusicName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivMusicAlbum"
+            android:text="@string/music_name"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvMusicTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivMusicAlbum"
+            android:layout_below="@+id/tvMusicName"
+            android:text="@string/music_time"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
